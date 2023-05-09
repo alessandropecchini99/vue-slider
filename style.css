@@ -1,0 +1,105 @@
+body {
+    background-color: grey;
+    /* background-color: black; */
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+.carosello {
+    width: 1600px;
+    height: 1100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+/* PHOTO */
+.photo .activeDiv {
+    display: none;
+    height: 100%;
+}
+
+.photo {
+    height: 100%;
+    flex: 0 0 80%;
+}
+
+.carosello .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.photo p  {
+    position: absolute;
+    top: 3.5em;
+    left: 10px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+.photo h3 {
+    position: absolute;
+    top: 0.5em;
+    left: 10px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+.carosello .photo .active {
+    display: block;
+}
+
+
+
+/* MINIATURE */
+.miniature .activeDiv {
+    height: calc(100% / 5);
+    filter: brightness(.4);
+}
+
+.miniature {
+    flex: 0 0 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.miniature img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 0;
+    object-fit: cover;
+}
+
+.miniature .active {
+    filter: brightness(1);
+    border: 3px solid lightgrey;
+}
+
+/* CONTROLS */
+.carosello .controls {
+    position: absolute;
+    top: -80px;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 50;
+}
+
+.btn {
+    font-size: 3em;
+    padding: 0;
+    border: 0px;
+}
